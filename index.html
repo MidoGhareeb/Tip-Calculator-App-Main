@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- the title of the project -->
+    <title>Tip Calculator App Main</title>
+    <!-- the main css file styling -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Import the icon of the page  -->
+    <link rel="icon" href="image/favicon-32x32.png" />
+  </head>
+  <body>
+    <!-- logo of the page -->
+    <div class="logo">
+      <img src="image/logo.svg" alt="logo" />
+    </div>
+    <!-- the main container -->
+    <div class="container">
+      <!-- input part -->
+      <div class="inputs">
+        <!-- bill input -->
+        <div class="bills">
+          <div class="labels">
+            <label for="bill">Bill</label>
+            <label class="billerr" for="bill">Can't be zero</label>
+          </div>
+          <div class="bill-input">
+            <input type="number" id="bill" placeholder="0" autocomplete="off" />
+            <img src="image/icon-dollar.svg" alt="$" />
+          </div>
+        </div>
+        <!-- multi choice tip -->
+        <div class="tip">
+          <span>Select Tip %</span>
+          <div class="buttons">
+            <button data-tip="0.05" class="tip-btn">5%</button>
+            <button data-tip="0.1" class="tip-btn">10%</button>
+            <button data-tip="0.15" class="tip-btn">15%</button>
+            <button data-tip="0.25" class="tip-btn">25%</button>
+            <button data-tip="0.5" class="tip-btn">50%</button>
+            <input
+              type="number"
+              placeholder="Custom"
+              id="custom"
+              autocomplete="off"
+            />
+            <!--user can also put his tip-->
+          </div>
+        </div>
+        <!-- number of pepole input -->
+        <div class="number-people">
+          <div class="labels">
+            <label for="num">Number of People</label>
+            <label class="numerr" for="num">Can't be zero</label>
+          </div>
+          <div class="num-input">
+            <input type="number" id="num" placeholder="0" autocomplete="off" />
+            <img src="image/icon-person.svg" alt="person" />
+          </div>
+        </div>
+      </div>
+      <!-- outputs part -->
+      <div class="outputs">
+        <div class="result">
+          <!-- the result for amount the tip for one person -->
+          <div class="amount">
+            <h3>Tip Amount <br /><span>/ person</span></h3>
+            <h1>$0.00</h1>
+          </div>
+          <!-- the total price for one person -->
+          <div class="total">
+            <h3>Total <br /><span>/ person</span></h3>
+            <h1>$0.00</h1>
+          </div>
+        </div>
+        <!-- button to reset the page -->
+        <button class="disapled" onclick="reload ()">Reset</button>
+      </div>
+    </div>
+    <!-- the link for the programmer -->
+    <div class="mentor">
+      Challenge by
+      <a href="https://www.frontendmentor.io/home">Frontend Mentor.</a> Coded by
+      <a href="https://www.frontendmentor.io/profile/MidoGhareeb"
+        >Mohamed Ghareeb.</a
+      >
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
